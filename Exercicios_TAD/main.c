@@ -1,26 +1,29 @@
 #include <stdio.h>
 #include "termometro.h"
+#include "fracao.h"
 
 int main()
 {
-    float temp;
-    Termometro t;
+    int n1, d1, n2, d2;
+    Fracao f1, f2, res;
 
-    scanf("%f", &temp);
+    scanf("%D %D", &n1, &d1);
+    scanf("%D %D", &n2, &d2);
 
-    t = criarTermometroCelsius(temp);
+    f1 = criarFracao(n1,d1);
+    f2 = criarFracao(n2,d2);
 
-    printf("%.1f C\n", obterCelsius(t));
-    printf("%.1f F\n", obterFahrenheit(t));
-    printf("%.1f K\n", obterKelvin(t));
+    res = somarFracoes(f1,f2);
+    printf("%d/%d\n", res.numerador, res.denominador);
 
-    if(verificarAlertaCongelamento(t))
-        printf("Trincando\n");
+    res = divisaoFracoes(f1,f2);
+    printf("%d/%d\n", res.numerador, res.denominador);
 
-    else if(verificarAlertaEbulicao(t))
-        printf("Pelando\n");
+    res = multiplicarFracoes(f1,f2);
+    printf("%d/%d\n", res.numerador, res.denominador);
 
-    else
-        printf("Normal\n");
+    res = subtrairFracoes(f1,f2);
+    printf("%d/%d\n", res.numerador, res.denominador);
+
     return 0;
 }

@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1763504466 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\main.c
+1763507186 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\main.c
 	<stdio.h>
 	"termometro.h"
+	"fracao.h"
 
 1763503903 c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\termometro.c
 	"termometro.h"
@@ -10,4 +11,9 @@
 
 1763503903 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\termometro.c
 	"termometro.h"
+
+1763507136 c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\fracao.h
+
+1763507168 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\fracao.c
+	"fracao.h"
 
