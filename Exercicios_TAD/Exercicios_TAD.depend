@@ -1,10 +1,13 @@
 # depslib dependency file v1.0
-1763504371 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\main.c
+1763504466 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\main.c
 	<stdio.h>
-	"termometro.c"
+	"termometro.h"
 
 1763503903 c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\termometro.c
 	"termometro.h"
 
 1763503894 c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\termometro.h
+
+1763503903 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_tad\termometro.c
+	"termometro.h"
 

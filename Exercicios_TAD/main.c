@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "termometro.c"
+#include "termometro.h"
 
 int main()
 {
