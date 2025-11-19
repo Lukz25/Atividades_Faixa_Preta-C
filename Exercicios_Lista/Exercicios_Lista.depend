@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1763515159 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_lista\main.c
+	<stdio.h>
+	"lista.h"
+
+1763515216 c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_lista\lista.h
+	<stdbool.h>
+	<math.h>
+
+1763515409 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_lista\lista.c
+	"lista.h"
+
