@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1763561243 source:c:\users\ceitelabinfo\desktop\atividades_faixa_preta-c\exercicios_fila\fila.c
+	"fila.h"
+	<stdio.h>
+
+1763558474 c:\users\ceitelabinfo\desktop\atividades_faixa_preta-c\exercicios_fila\fila.h
+	<stdbool.h>
+
+1763561262 source:c:\users\ceitelabinfo\desktop\atividades_faixa_preta-c\exercicios_fila\main.c
+	<stdio.h>
+	"fila.h"
+

@@ -16,5 +16,7 @@ queue_info dequeue(fila *);
 bool queue_isempty(fila);
 bool queue_isfull(fila);
 void print_queue(fila);
+void intercalar_filas(fila *, fila *, fila *);
+void rotacionar_fila(fila *, int );
 
 #endif // _FILA_H

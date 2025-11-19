@@ -30,3 +30,63 @@ void print_queue(fila f){
     }
     printf("\n");
 }
+
+
+void intercalar_filas(fila *f1, fila *f2, fila *res){
+
+
+    if(res->qtd_elementos == MAX_QUEUE)
+        exit(1);
+
+    else{
+        int i=0, j=0, c=0;
+
+        while(i<f1->qtd_elementos&&j<f2->qtd_elementos){
+
+            if(c%2==0){
+                enqueue(res,f1->dados[i]);
+                i++;
+            }
+
+            else{
+
+                enqueue(res,f2->dados[j]);
+                j++;
+            }
+
+            c++;
+        }
+
+    }
+
+}
+
+
+
+void rotacionar_fila(fila *f, int k){
+
+    int i, indice;
+    queue_info item;
+
+    for(i=0; i<f->qtd_elementos; i++){
+
+        if(i==0){
+            item = f->dados[(i+k)%f->qtd_elementos];
+            f->dados[(i+k)%f->qtd_elementos] = f->dados[i];
+            indice = (i+k)%f->qtd_elementos;
+        }
+
+
+        else{
+
+            item = f->dados[indice];
+            indice = (i+k)%f->qtd_elementos;
+            f->dados[indice] = item;
+        }
+
+
+    }
+
+
+
+}
