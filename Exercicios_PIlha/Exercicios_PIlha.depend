@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1763511848 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_pilha\main.c
+	<stdio.h>
+	"pilha.h"
+	<time.h>
+
+1763508486 c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_pilha\pilha.h
+	<stdbool.h>
+
+1763512345 source:c:\users\usuario\desktop\atividades_faixa_preta-c\exercicios_pilha\pilha.c
+	"pilha.h"
+
