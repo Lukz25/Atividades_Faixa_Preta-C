@@ -52,4 +52,5 @@ for i in range(11):
     else:
         print("Limite Máximo atingido")
     
-    
+contador.Valor = 3
+print(contador.Valor)  
