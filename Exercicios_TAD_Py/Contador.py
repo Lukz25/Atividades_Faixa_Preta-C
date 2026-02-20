@@ -1,44 +1,46 @@
 class Contador():
 
-    def __init__(self, limite):
-        self.Valor = 0
-        self.Limite = limite
+    def __init__(self, limite:int) -> None:
+        self.Valor:int = 0
+        self.Limite:int = limite
 
-    def Incrementar(self):
+    def Incrementar(self) -> bool:
         if(self.Valor == self.Limite):
-            raise ValueError("Limite máximo atingido.")
+            return False
         
         self.Valor += 1
+        return True
 
-    def Decrementar(self):
+    def Decrementar(self) -> bool:
         if(self.Valor == 0):
-            raise ValueError("Limite mínimo atingido.")
+            return False
         
         self.Valor -=1
+        return True
 
-    def Reiniciar(self):
+    def Reiniciar(self) -> None:
         self.Valor = 0
 
-    def Obter_Valor(self):
+    def Obter_Valor(self) -> int:
         return self.Valor
     
-    def Definir_Valor(self, valor):
+    def Definir_Valor(self, valor:int) -> bool:
         if(valor >= 0 and valor <= self.Limite):
             self.Valor = valor
+            return True
         
         else:
-            raise ValueError("Valor inválido.")
+            return False
         
 
 
 contador = Contador(10)
 
-try: 
-    for i in range(11):
-        contador.Incrementar()
+for i in range(11):
+    if(contador.Incrementar()):
         print(contador.Obter_Valor())
     
+    else:
+        print("Limite Máximo atingido")
     
-
-except ValueError as erro:
-    print(erro)
+    
