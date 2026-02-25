@@ -19,35 +19,39 @@ class Horario():
     
 
     def Exibir_Horario_Formal(self) -> None:
-        print(f"{self._horas}:{self._minutos}:{self._segundos}")
+        print(f"{self.Horas}:{self.Minutos}:{self.Segundos}")
 
     def Validar_Horario(self) -> bool:
 
-        if(self._horas > 24 or self._minutos > 60 or self._segundos > 60):
+        if(self.Horas > 24 or self.Minutos > 60 or self.Segundos > 60):
             return False
         
         return True
     
-    def Calcular_Diferenca_Minutos(h1, h2:Horario) -> int:
+    def Calcular_Diferenca_Minutos(self, h2:'Horario') -> int:
 
-        segundos1 = (h1._horas * 3600) + (h1._minutos * 60) + h1._segundos
-        segundos2 = (h2._horas * 3600) + (h2._minutos * 60) + h2._segundos
+        segundos1 = (self.Horas * 3600) + (self.Minutos * 60) + self.Segundos
+        segundos2 = (h2.Horas * 3600) + (h2.Minutos * 60) + h2.Segundos
 
         total = abs(segundos1 - segundos2)
 
         return total/60
     
-    def Adicionar_Minutos(self, minutos:int) -> Horario:
-        segundosH = (self._horas * 3600) + (self._minutos *60) + self._segundos
+    def Adicionar_Minutos(self, minutos:int) -> 'Horario':
+        segundosH = (self.Horas * 3600) + (self.Minutos *60) + self.Segundos
         segundosM = minutos * 60
 
         total = segundosH + segundosM
 
-        hora = total/3600
+        hora:int = (total//3600)%24
         total %= 3600
-        minuto = total/60
-        segundo = total%60
+        minuto:int = (total//60)%60
+        segundo:int = total%60
 
         return Horario(hora, minuto, segundo)
 
 
+h = Horario(23, 59, 59)
+h.Exibir_Horario_Formal() 
+h1 = h.Adicionar_Minutos(3)
+h1.Exibir_Horario_Formal()
